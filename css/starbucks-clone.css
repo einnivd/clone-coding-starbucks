@@ -13,7 +13,7 @@ a {
 }
 .wrap {
   width: 100%;
-  background-color: gray;
+  /* background-color: gray; */
 }
 /* 헤더 */
 header .inner {
@@ -41,7 +41,7 @@ header .inner {
   align-content: stretch;
 }
 /* 상단 메뉴 */
-.customer-menu {
+.header-top {
   position: absolute;
   top: 0;
   right: 0;
@@ -49,40 +49,37 @@ header .inner {
   font-size: 18px;
   /* background-color: violet; */
 }
-.customer-menu ul {
+.header-top ul {
   display: flex;
   padding: 10px 0;
   align-items: center;
 }
-.customer-menu li {
+.header-top li {
   width: calc(100% / 4);
   text-align: center;
 }
 /* 하단 메뉴 */
-.cafe-menu {
+.header-bt {
   position: absolute;
   bottom: 0;
   right: 0;
-  background-color: rgb(4, 122, 0);
+  /* background-color: rgb(4, 122, 0); */
   z-index: 999;
 }
-.cafe-menu > ul {
+.header-bt > ul {
   display: flex;
   justify-content: flex-end;
   padding: 5px;
   align-items: center;
 }
-.cafe-menu > ul > li{
+.gnb{
   padding: 0 10px;
 }
-.cafe-menu > ul > li > a {
+.gnb a {
   width: calc(100% / 6);
   font-size: 20px;
-  color: #f0f0f0;
-}
-
-.cafe-menu > ul >li:hover .depth2{
-  visibility: visible;
+  color: #333;
+  cursor: pointer;
 }
 .depth2 {
   position: absolute;
@@ -91,7 +88,11 @@ header .inner {
   display: flex;
   visibility: hidden;
 }
+.gnb:hover .depth2{
+  visibility: visible;
+}
 .depth2 > li{
+
 }
 .depth2 > li >a{
   font-weight: bold;

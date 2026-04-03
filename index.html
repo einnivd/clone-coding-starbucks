@@ -4,7 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>스타벅스 웹사이트 클론 코딩</title>
-    <link rel="stylesheet" href="css/starbucks-clone.css" />
+    <link rel="stylesheet" href="css/starbucks-clone-1.css" />
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/site.webmanifest" />
   </head>
   <body>
     <!-- 전체 레이아웃 -->
@@ -19,7 +38,7 @@
           <!-- 메뉴 -->
           <div class="menu">
             <!--상단 메뉴 -->
-            <div class="customer-menu">
+            <div class="header-top">
               <ul>
                 <li><a href="#">Sign In</a></li>
                 <li><a href="#">My Starbucks</a></li>
@@ -28,9 +47,9 @@
               </ul>
             </div>
             <!-- 하단 메뉴 -->
-            <div class="cafe-menu">
+            <div class="header-bt">
               <ul>
-                <li>
+                <li class="gnb">
                   <a href="#">COFFEE</a>
                   <ul class="depth2">
                     <li>
@@ -79,7 +98,7 @@
                     </li>
                   </ul>
                 </li>
-                <li>
+                <li class="gnb">
                   <a href="#">MENU</a>
                   <ul class="depth2">
                     <li>
@@ -129,93 +148,101 @@
                     </li>
                   </ul>
                 </li>
-                <li>
+                <li class="gnb">
                   <a href="#">STORE</a>
                   <ul class="depth2">
-                    <li><a href="#">매장 찾기</a>
-                        <ul class="depth3">
-                            <li>퀵 검색</li>
-                            <li>지역 검색</li>
-                        </ul>
+                    <li>
+                      <a href="#">매장 찾기</a>
+                      <ul class="depth3">
+                        <li>퀵 검색</li>
+                        <li>지역 검색</li>
+                      </ul>
                     </li>
                     <li><a href="#">드라이브 스루 매장</a></li>
                     <li><a href="#">스타벅스 리저브 매장</a></li>
                     <li><a href="#">커뮤니티 스토어 매장</a></li>
                   </ul>
                 </li>
-                <li>
+                <li class="gnb">
                   <a href="#">STARBUCKS REWARDS</a>
                   <ul class="depth2">
-                    <li><a href="#">스타벅스 리워드</a>
-                        <ul class="depth3">
-                            <li>스타벅스 리워드 소개</li>
-                            <li>등급 및 혜택</li>
-                            <li>스타벅스 별</li>
-                            <li>자주 하는 질문</li>
-                        </ul>
+                    <li>
+                      <a href="#">스타벅스 리워드</a>
+                      <ul class="depth3">
+                        <li>스타벅스 리워드 소개</li>
+                        <li>등급 및 혜택</li>
+                        <li>스타벅스 별</li>
+                        <li>자주 하는 질문</li>
+                      </ul>
                     </li>
-                    <li><a href="#">스타벅스 카드</a>
-                        <ul class="depth3">
-                            <li>카드 소개</li>
-                            <li>카드 갤러리</li>
-                            <li>자주 하는 질문</li>
-                        </ul>
+                    <li>
+                      <a href="#">스타벅스 카드</a>
+                      <ul class="depth3">
+                        <li>카드 소개</li>
+                        <li>카드 갤러리</li>
+                        <li>자주 하는 질문</li>
+                      </ul>
                     </li>
-                    <li><a href="#">스타벅스 모바일 카드</a>
-                        <ul class="depth3">
-                            <li>모바일 카드 소개</li>
-                            <li>이용안내</li>
-                            <li>선물하기</li>
-                            <li>자주 하는 질문</li>
-                        </ul>
+                    <li>
+                      <a href="#">스타벅스 모바일 카드</a>
+                      <ul class="depth3">
+                        <li>모바일 카드 소개</li>
+                        <li>이용안내</li>
+                        <li>선물하기</li>
+                        <li>자주 하는 질문</li>
+                      </ul>
                     </li>
-    
                   </ul>
                 </li>
-                <li>
+                <li class="gnb">
                   <a href="#">CORPORATE SALES</a>
                   <ul class="depth2">
-                    <li><a href="#">단체 및 기업 구매 안내</a>
-                        <ul class="depth3">
-                            <li>MD상품</li>
-                            <li>실물카드</li>
-                            <li>모바일카드</li>
-                        </ul>
+                    <li>
+                      <a href="#">단체 및 기업 구매 안내</a>
+                      <ul class="depth3">
+                        <li>MD상품</li>
+                        <li>실물카드</li>
+                        <li>모바일카드</li>
+                      </ul>
                     </li>
-                    <li><a href="#">단체 주문 배달 안내</a>
-                        <ul class="depth3">
-                            <li>단체 주문 배달 안내</li>
-                            <li>단체 주문 신청</li>
-                            <li>신청 내역 조회</li>
-                        </ul>
+                    <li>
+                      <a href="#">단체 주문 배달 안내</a>
+                      <ul class="depth3">
+                        <li>단체 주문 배달 안내</li>
+                        <li>단체 주문 신청</li>
+                        <li>신청 내역 조회</li>
+                      </ul>
                     </li>
                   </ul>
                 </li>
-                <li>
+                <li class="gnb">
                   <a href="#">WHAT'S NEW</a>
                   <ul class="depth2">
-                    <li><a href="#">이벤트</a>
-                        <ul class="depth3">
-                            <li>전체</li>
-                            <li>스타벅스 카드</li>
-                            <li>스타벅스 리워드</li>
-                            <li>온라인</li>
-                        </ul>
+                    <li>
+                      <a href="#">이벤트</a>
+                      <ul class="depth3">
+                        <li>전체</li>
+                        <li>스타벅스 카드</li>
+                        <li>스타벅스 리워드</li>
+                        <li>온라인</li>
+                      </ul>
                     </li>
-                    <li><a href="#">뉴스</a>
-                        <ul class="depth3">
-                            <li>전체</li>
-                            <li>상품 출시</li>
-                            <li>스타벅스 문화</li>
-                            <li>사회공헌</li>
-                            <li>스타벅스 카드 출시</li>
-                        </ul>
+                    <li>
+                      <a href="#">뉴스</a>
+                      <ul class="depth3">
+                        <li>전체</li>
+                        <li>상품 출시</li>
+                        <li>스타벅스 문화</li>
+                        <li>사회공헌</li>
+                        <li>스타벅스 카드 출시</li>
+                      </ul>
                     </li>
-                    <li><a href="#">매장별 이벤트</a>
-                        <ul class="depth3">
-                            <li>일반 매장</li>
-                            <li>신규 매장</li>
-                        </ul>
+                    <li>
+                      <a href="#">매장별 이벤트</a>
+                      <ul class="depth3">
+                        <li>일반 매장</li>
+                        <li>신규 매장</li>
+                      </ul>
                     </li>
                     <li><a href="#">공지사항</a></li>
                   </ul>
