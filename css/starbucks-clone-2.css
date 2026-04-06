@@ -14,7 +14,6 @@ a {
 /* 전체 레이아웃 */
 .wrap {
   width: 100%;
-  min-width: 1200px;
   background-color: rgb(129, 188, 192);
 }
 
@@ -30,9 +29,7 @@ header {
 }
 header .inner {
   position: relative;
-  width: 1100px;
-  display: flex;
-  justify-content: space-between;
+   width: 1100px;
 }
 /* 로고 */
 .logo {
@@ -55,7 +52,7 @@ header .inner {
   justify-content: space-between;
   /* background-color: violet; */
 }
-/* 상단 메뉴 */
+/* header-top */
 .header-top {
   height: 50px;
   /* background-color: yellowgreen; */
@@ -74,7 +71,7 @@ header .inner {
 .header-top li:hover {
   color: #fff;
 }
-/* 하단 메뉴 */
+/* header-bottom */
 .header-bt {
   position: relative;
   height: 50px;
@@ -84,8 +81,12 @@ header .inner {
   display: flex;
   justify-content: flex-end;
   gap: 50px;
+  /* justify-content: space-between; */
+  /* padding-right: 20px; */
+  /* flex-wrap: wrap; */
 }
 .gnb {
+  /* line-height: 50px; */
   height: 50px;
   padding-top: 5px;
   cursor: pointer;
@@ -96,99 +97,50 @@ header .inner {
   text-align: center;
 }
 .gnb:hover > a {
-  text-decoration: underline;
-  color: #72a301;
+  color: #00812b;
 }
 .gnb:hover {
   background-color: #333;
 }
-.gnb:hover .depth2{
+/* 메인 */
+main{
+  margin: auto;
+  width: 100%;
+  background-color: rosybrown;
+}
+.hover-menu{
+  margin: auto;
+  width: 100%;
+}
+.gnb:hover .depth2 {
   visibility: visible;
 }
 .depth2 {
-  width: 100%;
+  width: 1100px;
   margin: auto;
   padding: 10px 30px 20px;
   position: absolute;
   top: 50px;
   left: 0;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  /* justify-content: space-between;*/
+  gap: 50px;
   visibility: hidden;
   color: #fff;
   background-color: #333;
 }
 .depth2 > li > a {
   padding: 10px 0;
+  display: block;
+  /* flex-wrap: wrap;
+  display: inline-block; */
   color: #fff;
 }
-.depth2 > li{
-   width: calc((100% - 60px) / 4);
-}
-  
 .depth3 {
   padding: 10px 0;
   font-size: 13px;
   color: #999;
 }
 .depth3 > li {
-  padding: 2px 0;
-}
-/* 메인 */
-main{
-  width: 100%;
-  background-color: grey;
-   margin: auto;
-  height: 500px;
-  
-  border: 20px solid rgb(229, 212, 233);
-  background-color: rgb(252, 221, 231);
-}
-/* 신메뉴 배너 */
-.main-inner{
-  margin: auto;
-  width: 90%;
-  display: flex;
-  /* background-color: rosybrown; */
-}
-/* 텍스트/자세히 보기 */
-.main-txt{
-  width: 30%;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-/* 텍스트 */
-.txt{
-  text-align: center;
-}
-/* 자세히 보기 */
-.detail-btn{
-  border: 2px solid rgb(151, 84, 168);
-  border-radius: 5px;
-  padding: 5px 20px;
-}
-.detail-btn p a{
-   color: rgb(151, 84, 168);
-}
-/* 배너 이미지 */
-.main-img{
-   width: 70%;
-}
-.banner-img{
-  display: flex;
-  gap: 50px;
-}
-.banner-img > li{
-  display: flex;
-  flex-direction: column;
-}
-.banner-img > li > img{
-}
-.banner-img p{
-  text-align: center;
-  font-size: 12px;
-  color: rgb(151, 84, 168);
+  /* padding: 5px 0; */
 }
