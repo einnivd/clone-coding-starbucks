@@ -25,7 +25,9 @@ header {
   background-color: #f6f5ef;
 }
 .inner {
+  position: relative;
   margin: auto;
+  z-index: 999;
   /* background-color: skyblue; */
 }
 header .inner {
@@ -39,9 +41,8 @@ header .inner {
   position: absolute;
   top: 13px;
   left: 13px;
-
   width: 75px;
-  z-index: 2;
+  /* z-index: 2; */
 }
 .logo img {
   width: 100%;
@@ -55,7 +56,7 @@ header .inner {
   justify-content: space-between;
   /* background-color: violet; */
 }
-/* 상단 메뉴 */
+/* 헤더-top */
 .header-top {
   height: 50px;
   /* background-color: yellowgreen; */
@@ -74,7 +75,7 @@ header .inner {
 .header-top li:hover {
   color: #fff;
 }
-/* 하단 메뉴 */
+/* 헤더-bottom */
 .header-bt {
   position: relative;
   height: 50px;
@@ -89,7 +90,7 @@ header .inner {
   height: 50px;
   padding-top: 5px;
   cursor: pointer;
-  z-index: 999;
+  /* z-index: 999; */
 }
 .gnb > a {
   padding: 10px;
@@ -102,93 +103,264 @@ header .inner {
 .gnb:hover {
   background-color: #333;
 }
-.gnb:hover .depth2{
-  visibility: visible;
-}
 .depth2 {
   width: 100%;
-  margin: auto;
+  /* height: auto; */
+  /* height: 400px; */
+  /* margin: auto; */
   padding: 10px 30px 20px;
   position: absolute;
   top: 50px;
+  /* top: -350px; */
+  /* bottom: 0; */
   left: 0;
-  display: flex;
+  /* display: flex; */
   flex-wrap: wrap;
   gap: 20px;
-  visibility: hidden;
+  /* opacity: 0; */
+  display: none;
   color: #fff;
   background-color: #333;
+  /* transition: all 0.5s; */
+  /* z-index: 1; */
+}
+.gnb:hover .depth2 {
+  /* position: absolute; */
+  top: 50px;
+  /* left: 0; */
+  opacity: 1;
+  display:;
+  /* height: auto; */
+  /* padding: 10px 30px 20px; */
+  /* overflow: hidden; */
 }
 .depth2 > li > a {
   padding: 10px 0;
+
+  /* visibility: hidden; */
   color: #fff;
 }
-.depth2 > li{
-   width: calc((100% - 60px) / 4);
+.gnb:hover .depth3 {
+  /* visibility: visible; */
 }
-  
+.gnb:hover .depth2 > li > a {
+  /* visibility: visible; */
+}
+.depth2 > li {
+  width: calc((100% - 60px) / 4);
+}
+
 .depth3 {
   padding: 10px 0;
   font-size: 13px;
   color: #999;
+  /* visibility: hidden; */
 }
 .depth3 > li {
   padding: 2px 0;
 }
 /* 메인 */
-main{
+main {
   width: 100%;
-  background-color: grey;
-   margin: auto;
   height: 500px;
-  
+  background-color: grey;
+  margin: auto;
   border: 20px solid rgb(229, 212, 233);
   background-color: rgb(252, 221, 231);
 }
 /* 신메뉴 배너 */
-.main-inner{
+.main-inner {
   margin: auto;
-  width: 90%;
+  width: 70%;
+  height: 460px;
   display: flex;
   /* background-color: rosybrown; */
 }
 /* 텍스트/자세히 보기 */
-.main-txt{
-  width: 30%;
+.main-txt {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 20px;
+}
+/* 텍스트 */
+.txt img {
+  width: 90%;
+  margin-top: 150px;
+  /* align-items: center; */
+}
+/* 자세히 보기 */
+.detail-btn {
+  border: 2.5px solid rgb(182, 149, 190);
+  border-radius: 5px;
+  padding: 8px 30px;
+}
+.detail-btn p a {
+  font-size: 18px;
+  color: rgb(147, 114, 155);
+}
+/* 배너 이미지 */
+.main-img {
+  width: 50%;
+}
+.banner-img {
+  display: flex;
+  gap: 50px;
+  align-items: baseline;
+  margin-top: 60px;
+}
+.banner-img > li {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-/* 텍스트 */
-.txt{
-  text-align: center;
+.banner-img > li > img {
+  width: 100px;
 }
-/* 자세히 보기 */
-.detail-btn{
-  border: 2px solid rgb(151, 84, 168);
-  border-radius: 5px;
-  padding: 5px 20px;
-}
-.detail-btn p a{
-   color: rgb(151, 84, 168);
-}
-/* 배너 이미지 */
-.main-img{
-   width: 70%;
-}
-.banner-img{
-  display: flex;
-  gap: 50px;
-}
-.banner-img > li{
-  display: flex;
-  flex-direction: column;
-}
-.banner-img > li > img{
-}
-.banner-img p{
+.banner-img p {
   text-align: center;
   font-size: 12px;
   color: rgb(151, 84, 168);
 }
+.banner-img p:first-child {
+  border-bottom: 1px solid rgb(182, 149, 190);
+  padding-bottom: 5px;
+}
+.banner-img p:last-child {
+  padding-top: 5px;
+}
+/* 공지사항 / 프로모션 */
+.noti-promo {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  /* text-align: center; */
+}
+.noti-promo .left {
+  position: relative;
+  width: 50%;
+  background-color: #222;
+}
+.notice {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  /* background-color: violet; */
+}
+.notice span {
+  border: 1px solid #fff;
+  border-radius: 30px;
+  /* padding: 1px 3px; */
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  /* padding: 3px; */
+  cursor: pointer;
+}
+.notice a {
+  color: #fff;
+}
+.noti-promo .right {
+  position: relative;
+  width: 50%;
+  background-color: #f6f5ef;
+}
+.promotion {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  padding-left: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+  /* background-color: #c48282; */
+}
+.promotion span {
+  border: 1px solid #000;
+  border-radius: 30px;
+  /* padding: 1px 3px; */
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  /* padding: 3px; */
+  cursor: pointer;
+}
+/* 리워드 */
+.rewards {
+  width: 100%;
+  height: 300px;
+  background-color: #1e3932;
+}
+.rewards-inner {
+  width: 70%;
+  margin: auto;
+  padding-top: 30px;
+  display: flex;
+  gap: 50px; 
+  color: #fff;
+}
+/* 리워드 로고 */
+.rewards-logo{
+  width: 30%;
+  margin: auto;
+}
+/* 리워드 내용 */
+.rewards-contents{
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.mdl-contents{
+  display: flex;
+  justify-content: space-between;
+}
+.mdl-contents .btn{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+ 
+}
+.mdl-contents .btn p{
+  border: 1px solid ;
+  border-radius: 3px;
+   padding: 10px 15px;
+}
+.mdl-contents .btn p:first-child{
+  border: none;
+  background-color: green;
+}
+.mdl-contents .btn p:last-child{
+  border-color: #fff;
+  background-color: none;
+}
+.bt-contents{
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #fff;
+  padding-top: 20px;
+}
+.bt-contents .btn{
+  width: 240px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+}
+.bt-contents .btn p{
+  color: #fff;
+  padding: 10px 15px;
+}
+
+
