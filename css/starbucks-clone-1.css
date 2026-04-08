@@ -24,17 +24,14 @@ header {
   width: 100%;
   background-color: #f6f5ef;
 }
-.inner {
+header .inner {
   position: relative;
   margin: auto;
   z-index: 999;
-  /* background-color: skyblue; */
-}
-header .inner {
-  position: relative;
   width: 1100px;
   display: flex;
   justify-content: space-between;
+  /* background-color: skyblue; */
 }
 /* 로고 */
 .logo {
@@ -303,64 +300,324 @@ main {
   background-color: #1e3932;
 }
 .rewards-inner {
-  width: 70%;
+  width: 50%;
   margin: auto;
   padding-top: 30px;
   display: flex;
-  gap: 50px; 
+  gap: 50px;
   color: #fff;
 }
 /* 리워드 로고 */
-.rewards-logo{
+.rewards-logo {
   width: 30%;
   margin: auto;
 }
 /* 리워드 내용 */
-.rewards-contents{
+.rewards-contents {
   width: 70%;
   margin: auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.mdl-contents{
+.mdl-contents {
   display: flex;
   justify-content: space-between;
 }
-.mdl-contents .btn{
+.mdl-contents .btn {
   display: flex;
   align-items: center;
   gap: 10px;
   color: #fff;
- 
 }
-.mdl-contents .btn p{
-  border: 1px solid ;
+.mdl-contents .btn p {
+  border: 1px solid;
   border-radius: 3px;
-   padding: 10px 15px;
+  padding: 10px 15px;
 }
-.mdl-contents .btn p:first-child{
+.mdl-contents .btn p:first-child {
   border: none;
   background-color: green;
 }
-.mdl-contents .btn p:last-child{
+.mdl-contents .btn p:last-child {
   border-color: #fff;
   background-color: none;
 }
-.bt-contents{
+.bt-contents {
   display: flex;
   justify-content: space-between;
   border-top: 1px solid #fff;
   padding-top: 20px;
 }
-.bt-contents .btn{
-  width: 240px;
+.bt-contents .btn {
+  width: 250px;
+
   border: 1px solid #fff;
   border-radius: 3px;
 }
-.bt-contents .btn p{
+.bt-contents .btn p {
   color: #fff;
   padding: 10px 15px;
 }
-
-
+/* 시즌 프로모션 배너 */
+.mainBean {
+  background: url(../images/background.png) center / cover no-repeat;
+  /* width: 100%; */
+  height: 800px;
+}
+.mainBean .inner {
+  width: 60%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rosybrown; */
+}
+.mainBean .img-box {
+  /* background-color: slateblue; */
+}
+.mainBean .txt-box {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  /* background-color: turquoise; */
+}
+.mainBean .txt {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #863232;
+}
+.mainBean .detail-btn {
+  width: 150px;
+  padding: 10px;
+  border: 2px solid #863232;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+.mainBean .detail-btn p {
+  color: #863232;
+  font-size: 18px;
+}
+.mainBean .detail-btn:hover {
+  background-color: #863232;
+  transition: all 0.5s;
+}
+.mainBean .detail-btn:hover p {
+  color: #fff;
+  text-decoration: underline;
+  transition: all 0.5s;
+}
+/* 시즌 리저브 배너 */
+.reserve {
+  width: 100%;
+  background-color: #faecdc;
+}
+.reserve .inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin: auto;
+  /* background-color: pink; */
+}
+.reserve-title {
+  /* margin-top: 60px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.reserve-detailBtn {
+  width: 150px;
+  padding: 10px;
+  border: 2px solid #b67741;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+.reserve-detailBtn p {
+  color: #b67741;
+  font-size: 18px;
+}
+.reserve-detailBtn:hover {
+  background-color: #b67741;
+  transition: all 0.5s;
+}
+.reserve-detailBtn:hover p {
+  color: #fff;
+  text-decoration: underline;
+  transition: all 0.5s;
+}
+/* Pick Your Favorite */
+.fav-wrap {
+  width: 100%;
+  background-color: #999;
+}
+.fav-wrap .inner {
+  width: 60%;
+  margin: auto;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+}
+.fav-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+  color: #fff;
+}
+.fav-txt .txt-1 {
+  font-size: 100px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 80px;
+}
+.fav-txt .txt-1 p:nth-child(2) {
+  font-size: 85px;
+}
+.fav-txt .txt-1 p:last-child {
+  font-size: 50px;
+}
+.fav-txt .txt-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.fav-wrap .detail-btn {
+  width: 150px;
+  padding: 10px;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+.fav-wrap .detail-btn p {
+  color: #ffffff;
+  font-size: 18px;
+}
+.fav-wrap .detail-btn:hover {
+  background-color: #ffffff;
+  transition: all 0.5s;
+}
+.fav-wrap .detail-btn:hover p {
+  color: #000000;
+  text-decoration: underline;
+  transition: all 0.5s;
+}
+.fav-visual img {
+  width: 700px;
+}
+/* MAGAZINE */
+.magazine-wrap {
+  width: 100%;
+  background-color: #fff;
+}
+.magazine-wrap .inner {
+  width: 60%;
+  margin: auto;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.magazine-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin-top: 100px;
+}
+.magazine-btn {
+  width: 150px;
+  padding: 10px;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+.magazine-btn p {
+  color: #000000;
+  font-size: 18px;
+}
+.magazine-btn:hover {
+  background-color: #000000;
+  transition: all 0.5s;
+}
+.magazine-btn:hover p {
+  color: #ffffff;
+  text-decoration: underline;
+  transition: all 0.5s;
+}
+/* 매장 찾기 */
+.store-wrap {
+  position: relative;
+  width: 100%;
+  padding:0 100px 100px 0;
+  background-color: #ddd;
+}
+.store-wrap .inner {
+  /* position: absolute; */
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+}
+.store-visual {
+  position: relative;
+  /* background-color: seagreen; */
+}
+/* .store-1 {
+  position: absolute;
+  top: 0;
+  left: 160px;
+  width: 366px;
+  height: 312px;
+} */
+.store-2 {
+  position: absolute;
+  top: 170px;
+  left: 200px;
+  width: 228px;
+  /* height: 228px; */
+}
+.store-wrap .txt {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.store-wrap .txt-1 p{
+  font-size: 20px;
+}
+.store-btn{
+  width: 150px;
+  padding: 10px;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+.store-btn p{
+  color: #000000;
+  font-size: 18px;
+}
+.store-btn:hover {
+  background-color: #000000;
+  transition: all 0.5s;
+}
+.store-btn:hover p {
+  color: #ffffff;
+  text-decoration: underline;
+  transition: all 0.5s;
+}
