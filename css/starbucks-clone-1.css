@@ -69,8 +69,8 @@ header .inner {
   line-height: 50px;
   cursor: pointer;
 }
-.header-top li:hover {
-  color: #fff;
+.header-top li a:hover {
+  text-decoration: underline;
 }
 /* 헤더-bottom */
 .header-bt {
@@ -186,26 +186,87 @@ main {
   width: 90%;
   margin-top: 150px;
   /* align-items: center; */
+  opacity: 0;
+  animation: fadetxt 0.8s ease-out forwards;
+  animation-delay: 0.5s;
+}
+@keyframes fadetxt {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /* 자세히 보기 */
-.detail-btn {
+.main-inner .detail-btn {
   border: 2.5px solid rgb(182, 149, 190);
   border-radius: 5px;
   padding: 8px 30px;
+  opacity: 0;
+  animation: fadeDetail 0.8s ease-out forwards;
+  animation-delay: 3.5s;
 }
-.detail-btn p a {
+.main-inner .detail-btn p {
   font-size: 18px;
+  white-space: nowrap;
   color: rgb(147, 114, 155);
 }
+.main-inner .detail-btn:hover {
+  background-color: rgb(182, 149, 190);
+  transition: all 0.5s;
+}
+.main-inner .detail-btn:hover p {
+  color: #fff;
+  text-decoration: underline;
+  transition: all 0.5s;
+}
+@keyframes fadeDetail {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* 배너 이미지 */
-.main-img {
+.fade-in-image {
   width: 50%;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+  /* animation-delay: 1s; */
+  /* transition: all 3s; */
+}
+.fade-in-image:nth-child(1) {
+  animation-delay: 1s;
+}
+.fade-in-image:nth-child(2) {
+  animation-delay: 1.5s;
+}
+.fade-in-image:nth-child(3) {
+  animation-delay: 2s;
+}
+.fade-in-image:nth-child(4) {
+  animation-delay: 2.5s;
+}
+.fade-in-image:nth-child(5) {
+  animation-delay: 3s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .banner-img {
   display: flex;
   gap: 50px;
   align-items: baseline;
   margin-top: 60px;
+   
+
 }
 .banner-img > li {
   display: flex;
@@ -218,6 +279,7 @@ main {
 .banner-img p {
   text-align: center;
   font-size: 12px;
+  white-space: nowrap;
   color: rgb(151, 84, 168);
 }
 .banner-img p:first-child {
@@ -231,26 +293,28 @@ main {
 .noti-promo {
   width: 100%;
   height: 50px;
-  display: flex;
-  /* text-align: center; */
+  background-color: #72a301;
 }
-.noti-promo .left {
+.noti-promo .inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #000;
+}
+.noti-promo .notice {
   position: relative;
   width: 50%;
+  height: 100%;
+  color: #fff;
   background-color: #222;
 }
-.notice {
+.notice .txt {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 70%;
-  height: 100%;
-  padding-right: 10px;
+  top: 13px;
+  right: 20px;
+  width: 30%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  color: #fff;
-  /* background-color: violet; */
 }
 .notice span {
   border: 1px solid #fff;
@@ -265,23 +329,19 @@ main {
 .notice a {
   color: #fff;
 }
-.noti-promo .right {
+.noti-promo .promotion {
   position: relative;
   width: 50%;
+  height: 100%;
   background-color: #f6f5ef;
 }
-.promotion {
+.promotion .txt {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  padding-left: 100px;
+  top: 13px;
+  left: 20px;
+  width: 30%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  color: #000;
-  /* background-color: #c48282; */
 }
 .promotion span {
   border: 1px solid #000;
@@ -301,8 +361,9 @@ main {
 }
 .rewards-inner {
   width: 50%;
+  /* min-width: 260px; */
   margin: auto;
-  padding-top: 30px;
+  padding: 20px 0;
   display: flex;
   gap: 50px;
   color: #fff;
@@ -319,10 +380,12 @@ main {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  white-space: nowrap;
 }
 .mdl-contents {
   display: flex;
   justify-content: space-between;
+  gap: 200px;
 }
 .mdl-contents .btn {
   display: flex;
@@ -343,21 +406,32 @@ main {
   border-color: #fff;
   background-color: none;
 }
+.mdl-contents .btn p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.rewards-contents span{
+  border-top: 1px solid #fff;
+  width: 100%;
+}
 .bt-contents {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid #fff;
-  padding-top: 20px;
+  gap: 50px;
+  /* padding-top: 20px; */
 }
 .bt-contents .btn {
   width: 250px;
-
   border: 1px solid #fff;
   border-radius: 3px;
 }
 .bt-contents .btn p {
   color: #fff;
   padding: 10px 15px;
+}
+.bt-contents .btn p:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 /* 시즌 프로모션 배너 */
 .mainBean {
@@ -381,6 +455,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  white-space: nowrap;
   /* background-color: turquoise; */
 }
 .mainBean .txt {
@@ -409,6 +484,9 @@ main {
   color: #fff;
   text-decoration: underline;
   transition: all 0.5s;
+}
+.mainBean:hover .mainBean .img-box{
+  
 }
 /* 시즌 리저브 배너 */
 .reserve {
@@ -471,6 +549,7 @@ main {
   align-items: flex-end;
   gap: 20px;
   color: #fff;
+  white-space: nowrap;
 }
 .fav-txt .txt-1 {
   font-size: 100px;
@@ -560,19 +639,32 @@ main {
 }
 /* 매장 찾기 */
 .store-wrap {
-  position: relative;
   width: 100%;
-  padding:0 100px 100px 0;
+  height: 450px;
+  /* padding:0 100px 100px 0; */
   background-color: #ddd;
 }
 .store-wrap .inner {
   /* position: absolute; */
+  position: relative;
   width: 60%;
+  height: 100%;
   margin: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   gap: 200px;
+}
+.background-img .bean {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  overflow: hidden;
+}
+.background-img .store {
+  position: absolute;
+  bottom: 0;
+  right: 100px;
 }
 .store-visual {
   position: relative;
@@ -596,11 +688,15 @@ main {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 500px;
+  padding-top: 100px;
+  white-space: nowrap;
+  z-index: 999;
 }
-.store-wrap .txt-1 p{
+.store-wrap .txt-1 p {
   font-size: 20px;
 }
-.store-btn{
+.store-btn {
   width: 150px;
   padding: 10px;
   border: 2px solid #000000;
@@ -608,7 +704,7 @@ main {
   cursor: pointer;
   text-align: center;
 }
-.store-btn p{
+.store-btn p {
   color: #000000;
   font-size: 18px;
 }
@@ -620,4 +716,116 @@ main {
   color: #ffffff;
   text-decoration: underline;
   transition: all 0.5s;
+}
+/* FOOTER */
+footer {
+  width: 100%;
+  /* height: 500px; */
+  color: #fff;
+  background-color: #272727;
+}
+footer .inner {
+  width: 60%;
+  margin: auto;
+  padding-top: 30px;
+
+  /* background-color: rgb(100, 32, 11); */
+}
+/* footer-top */
+.footer-top {
+  width: 100%;
+  padding-bottom: 50px;
+}
+.footer-menu {
+  display: flex;
+  justify-content: space-between;
+  /* gap: calc(100% / 5); */
+}
+#footer-menu {
+  padding-top: 10px;
+  font-size: 13px;
+}
+#footer-menu li {
+  padding: 3px 0;
+}
+#footer-menu li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+/* footer-mdl */
+.footer-mdl {
+  display: flex;
+  /* justify-content: center;
+  gap: 10px; */
+  /* gap: calc(100% / 7); */
+  justify-content: space-between;
+  /* flex-wrap: nowrap; */
+}
+.footer-mdl img {
+  width: calc((100% - 20px) / 7);
+  /* gap: calc(100% / 7); */
+}
+/* footer-btm */
+.footer-btm {
+  padding-top: 50px;
+}
+.footer-btm ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 20px; */
+  padding-bottom: 20px;
+  font-size: 13px;
+  /* background-color: thistle; */
+}
+.footer-btm ul li:nth-child(1) {
+  color: rgb(1, 177, 1);
+}
+.footer-btm ul li:nth-child(4) {
+  color: rgb(1, 177, 1);
+}
+.footer-btm li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer-btm span {
+  border-right: 1px solid #666;
+  width: 1px;
+  height: 15px;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+.footer-btm .button {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.footer-btm .button p {
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 5px 20px;
+  font-size: 12px;
+}
+.footer-btm .button p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+/* copyright */
+.copyright {
+  color: #999;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 0;
+}
+.copyright-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.copyright-btm {
+  margin: auto;
 }

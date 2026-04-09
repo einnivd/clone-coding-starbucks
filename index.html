@@ -264,47 +264,47 @@
             </div>
             <!-- 자세히 보기 -->
             <div class="detail-btn">
-              <p><a href="#">자세히 보기</a></p>
+              <a href="#"><p>자세히 보기</p></a>
             </div>
           </section>
           <!-- 배너 이미지 -->
           <section class="main-img">
             <ul class="banner-img">
-              <li>
+              <li class="fade-in-image">
                 <img src="images/chou-latte.png" alt="슈크림라떼" />
                 <div class="img-txt">
                   <p>CHOUX CREAM LATTE</p>
                   <p>슈크림 라떼</p>
                 </div>
               </li>
-              <li>
+              <li class="fade-in-image">
                 <img src="images/chou-foam.png" alt="슈폼라떼" />
                 <div class="img-txt">
                   <p>CHOUX FOAM LATTE</p>
                   <p>슈 폼 라떼</p>
                 </div>
               </li>
-              <li>
+              <li class="fade-in-image">
                 <img src="images/match-chou.png" alt="말차슈크림라떼" />
                 <div class="img-txt">
                   <p>CHOUX CREAM <br />MALCHA LATTE</p>
                   <p>슈크림 말차 라떼</p>
                 </div>
               </li>
-              <li>
+              <li class="fade-in-image">
                 <img src="images/strawberry-chou.png" alt="딸기슈크림라떼" />
                 <div class="img-txt">
                   <p>CHOUX CREAM <br />STRAWBERRY MILK</p>
                   <p>슈크림 딸기 라떼</p>
                 </div>
               </li>
-              <li>
+              <li class="fade-in-image">
                 <img src="images/peach.png" alt="백도라떼" />
                 <div class="img-txt">
                   <p>
                     CHERRY BLOSSOM <br />WHITE PEACH <br />CREAM FRAPPUCCINO
                   </p>
-                  <p>체리블라썸 백도 크림 프라푸치노</p>
+                  <p>체리블라썸 백도 크림<br> 프라푸치노</p>
                 </div>
               </li>
             </ul>
@@ -313,18 +313,20 @@
       </main>
       <!-- 공지사항 / 프로모션 -->
       <section class="noti-promo">
-        <!-- 공지사항 -->
-        <div class="left">
+        <div class="inner">
+          <!-- 공지사항 -->
           <div class="notice">
-            <p>공지사항</p>
-            <span><a href="#" title="공지사항 더보기">＋</a></span>
+            <div class="txt">
+              <p>공지사항</p>
+              <span><a href="#" title="공지사항 더보기">＋</a></span>
+            </div>
           </div>
-        </div>
-        <!-- 프로모션 -->
-        <div class="right">
+          <!-- 프로모션 -->
           <div class="promotion">
-            <p>스타벅스 프로모션</p>
-            <span>▼</span>
+            <div class="txt">
+              <p>스타벅스 프로모션</p>
+              <span>▼</span>
+            </div>
           </div>
         </div>
       </section>
@@ -356,7 +358,7 @@
                 <p>로그인</p>
               </div>
             </div>
-
+            <span></span>
             <!-- bt-contents -->
             <div class="bt-contents">
               <div class="txt-2">
@@ -468,8 +470,12 @@
       <!-- 매장 찾기 -->
       <section class="store-wrap">
         <div class="inner">
+          <div class="background-img">
+            <img src="images/store_exp_img.png" class="bean" alt="원두" />
+            <img src="images/store_exp.png" class="store" alt="매장" />
+          </div>
           <div class="store-visual">
-            <img src="images/main_story-1.png" alt="매장1" />
+            <img src="images/main_story-1.png" class="store-1" alt="매장1" />
             <img src="images/main_story-2.png" class="store-2" alt="매장2" />
           </div>
           <div class="txt">
@@ -499,9 +505,101 @@
           </div>
         </div>
       </section>
+      <!-- FOOTER -->
       <footer>
-        <!-- 개인정보처리방침 -->
-        <!-- copyright -->
+        <div class="inner">
+          <!-- footer-top -->
+          <div class="footer-top">
+            <ul class="footer-menu">
+              <li>
+                COMPANY
+                <ul id="footer-menu">
+                  <li>한눈에 보기</li>
+                  <li>스타벅스 사명</li>
+                  <li>스타벅스 소개</li>
+                  <li>컴플라이언스</li>
+                  <li>국내 뉴스룸</li>
+                  <li>세계의 스타벅스</li>
+                  <li>글로벌 뉴스룸</li>
+                </ul>
+              </li>
+              <li>
+                CORPORATE SALES
+                <ul id="footer-menu">
+                  <li>단체 및 기업 구매 안내</li>
+                  <li>단체 주문 배달 안내</li>
+                </ul>
+              </li>
+              <li>
+                PARTNERSHIP
+                <ul id="footer-menu">
+                  <li>신규 입점 제의</li>
+                  <li>협력 고객사 등록신청</li>
+                  <li>중개업체 확인</li>
+                </ul>
+              </li>
+              <li>
+                ONLINE COMMUNITY
+                <ul id="footer-menu">
+                  <li>페이스북</li>
+                  <li>트위터</li>
+                  <li>유튜브</li>
+                  <li>인스타그램</li>
+                </ul>
+              </li>
+              <li>
+                RECRUIT
+                <ul id="footer-menu">
+                  <li>채용 소개</li>
+                  <li>채용 지원하기</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <!-- footer-mdl -->
+          <div class="footer-mdl">
+            <img src="images/footer_award_2211_01.jpg" alt="awards" />
+            <img src="images/footer_award_2211_02.jpg" alt="awards" />
+            <img src="images/footer_award_2211_03.jpg" alt="awards" />
+            <img src="images/footer_award_2211_04.jpg" alt="awards" />
+            <img src="images/footer_award_2211_05.jpg" alt="awards" />
+            <img src="images/footer_award_2211_06.jpg" alt="awards" />
+            <img src="images/footer_award_2211_07.jpg" alt="awards" />
+          </div>
+          <!-- footer-btm -->
+          <div class="footer-btm">
+            <ul>
+              <li>개인정보처리방침</li>
+              <span></span>
+              <li>영상정보처리기기 운영관리 방침</li>
+              <span></span>
+              <li>홈페이지 이용약관</li>
+              <span></span>
+              <li>위치정보 이용약관</li>
+              <span></span>
+              <li>스타벅스 카드 이용약관</li>
+              <span></span>
+              <li>신세계 유니버스 클럽 이용약관</li>
+            </ul>
+            <div class="button">
+              <p>찾아오시는 길</p>
+              <p>신규입점제외</p>
+              <p>사이트 맵</p>
+            </div>
+          </div>
+          <!-- copyright -->
+          <div class="copyright">
+            <div class="copyright-top">
+              <p>사업자등록번호 : 201-81-21515</p>
+              <p>주식회사 에스씨케이컴퍼니 대표이사 : 손정현</p>
+              <p>TEL : 1522-3232</p>
+              <p>개인정보 보호책임자 : 이찬우</p>
+            </div>
+            <div class="copyright-btm">
+              <p>ⓒ 2026 Starbucks Coffee Company. All Rights Reserved.</p>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
