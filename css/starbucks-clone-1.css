@@ -126,7 +126,7 @@ header .inner {
   top: 50px;
   /* left: 0; */
   opacity: 1;
-  display:;
+
   /* height: auto; */
   /* padding: 10px 30px 20px; */
   /* overflow: hidden; */
@@ -265,8 +265,6 @@ main {
   gap: 50px;
   align-items: baseline;
   margin-top: 60px;
-   
-
 }
 .banner-img > li {
   display: flex;
@@ -410,7 +408,7 @@ main {
   text-decoration: underline;
   cursor: pointer;
 }
-.rewards-contents span{
+.rewards-contents span {
   border-top: 1px solid #fff;
   width: 100%;
 }
@@ -435,12 +433,15 @@ main {
 }
 /* 시즌 프로모션 배너 */
 .mainBean {
+  /* position: relative; */
   background: url(../images/background.png) center / cover no-repeat;
   /* width: 100%; */
   height: 800px;
 }
 .mainBean .inner {
+  /* position: relative; */
   width: 60%;
+  max-width: 1200px;
   height: 100%;
   margin: auto;
   display: flex;
@@ -448,15 +449,52 @@ main {
   align-items: center;
   /* background-color: rosybrown; */
 }
+.mainBean #img-box{
+  position: relative;
+  width: 50%;
+  height: 100%;
+  /* background-color: turquoise; */
+}
+.mainBean #txt-box{
+  position: relative;
+  width: 50%;
+  height: 100%;
+  /* background-color: violet; */
+}
 .mainBean .img-box {
+  position: absolute;
+  top: 20%;
+  right: 100%;
+  opacity: 0;
+  transition: all 2s;
+  /* transform: translate(50% , 50%); */
   /* background-color: slateblue; */
 }
+.mainBean:hover .img-box {
+  position: absolute;
+  top: 20%;
+  /* left: 40%; */
+ right: -10%;
+  opacity: 1;
+  /* transition: all 2s; */
+}
 .mainBean .txt-box {
+  position: absolute;
+  top: 40%;
+  left: 100%;
+  opacity: 0;
+  transition: all 2s;
   display: flex;
   flex-direction: column;
   gap: 30px;
   white-space: nowrap;
   /* background-color: turquoise; */
+}
+.mainBean:hover .txt-box {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  opacity: 1;
 }
 .mainBean .txt {
   display: flex;
@@ -485,9 +523,7 @@ main {
   text-decoration: underline;
   transition: all 0.5s;
 }
-.mainBean:hover .mainBean .img-box{
-  
-}
+
 /* 시즌 리저브 배너 */
 .reserve {
   width: 100%;
@@ -531,17 +567,26 @@ main {
 }
 /* Pick Your Favorite */
 .fav-wrap {
+  /* position: relative; */
   width: 100%;
-  background-color: #999;
+  height: 600px;
+  /* background-color: #999; */
+  background: url("../images/coffee_story_bigImg01.jpg") no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 .fav-wrap .inner {
+  position: relative;
   width: 60%;
+  height: 100%;
+  max-width: 1200px;
   margin: auto;
   padding: 100px 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 70px;
+  /* background-color: red; */
 }
 .fav-txt {
   display: flex;
@@ -550,8 +595,16 @@ main {
   gap: 20px;
   color: #fff;
   white-space: nowrap;
+  transition: all 2s;
+  /* background-color: #72a301; */
 }
+
 .fav-txt .txt-1 {
+  position: absolute;
+  top: 10%;
+  right: 150%;
+  opacity: 0;
+  transition: all 2s;
   font-size: 100px;
   font-weight: bolder;
   text-transform: uppercase;
@@ -566,34 +619,84 @@ main {
 .fav-txt .txt-1 p:last-child {
   font-size: 50px;
 }
+.fav-wrap:hover .txt-1 {
+  position: absolute;
+  top: 10%;
+  right: 55%;
+  opacity: 1;
+}
+.fav-txt .txt-2 {
+  position: absolute;
+  top: 55%;
+  right: 150%;
+  opacity: 0;
+  transition: all 4s;
+}
+.fav-wrap:hover .txt-2 {
+  position: absolute;
+  top: 55%;
+  right: 55%;
+  opacity: 1;
+}
 .fav-txt .txt-3 {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  position: absolute;
+  top: 65%;
+  right: 150%;
+  opacity: 0;
+  transition: all 4s;
 }
+.fav-wrap:hover .txt-3 {
+  position: absolute;
+  top: 65%;
+  right: 55%;
+  opacity: 1;
+}
+
 .fav-wrap .detail-btn {
+  position: absolute;
+  top: 85%;
+  right: 55%;
+  opacity: 0;
   width: 150px;
   padding: 10px;
   border: 2px solid #ffffff;
   border-radius: 8px;
   cursor: pointer;
   text-align: center;
+  transition: all 4s;
 }
 .fav-wrap .detail-btn p {
   color: #ffffff;
   font-size: 18px;
 }
-.fav-wrap .detail-btn:hover {
-  background-color: #ffffff;
-  transition: all 0.5s;
+.fav-wrap:hover .detail-btn{
+  opacity: 1;
+}
+.fav-wrap .detail-btn:hover{
+ background-color: #ffffff;
+ transition: 1s;
 }
 .fav-wrap .detail-btn:hover p {
   color: #000000;
+ 
   text-decoration: underline;
   transition: all 0.5s;
 }
+.fav-visual {
+  position: relative;
+  width: 50%;
+  max-width: 700px;
+  height: 100%;
+}
 .fav-visual img {
-  width: 700px;
+  position: absolute;
+  top: 20%;
+  right: 0;
+  /* width: 700px; */
+  width: 100%;
 }
 /* MAGAZINE */
 .magazine-wrap {
@@ -648,23 +751,31 @@ main {
   /* position: absolute; */
   position: relative;
   width: 60%;
+  /* max-width: 1500px; */
+  min-width: 1200px;
   height: 100%;
   margin: auto;
   display: flex;
   justify-content: center;
   /* align-items: center; */
   gap: 200px;
+  background-color: springgreen;
+   background: url(../images/store_exp_img.png) no-repeat;
+   background-position: 50% -19%;
 }
-.background-img .bean {
+/* .background-img-1{
   position: absolute;
-  top: -50px;
+  top: -10%;
   left: 50%;
   overflow: hidden;
 }
-.background-img .store {
+.background-img-1 img{
+   overflow: hidden;
+} */
+.background-img-2{
   position: absolute;
   bottom: 0;
-  right: 100px;
+  right: 10%;
 }
 .store-visual {
   position: relative;
@@ -688,7 +799,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 500px;
+  width: 450px;
   padding-top: 100px;
   white-space: nowrap;
   z-index: 999;
@@ -776,14 +887,15 @@ footer .inner {
   /* gap: 20px; */
   padding-bottom: 20px;
   font-size: 13px;
+  white-space: nowrap;
   /* background-color: thistle; */
 }
-.footer-btm ul li:nth-child(1) {
+.ft-txt {
   color: rgb(1, 177, 1);
 }
-.footer-btm ul li:nth-child(4) {
+/* .footer-btm ul li:nth-child(4) {
   color: rgb(1, 177, 1);
-}
+} */
 .footer-btm li:hover {
   text-decoration: underline;
   cursor: pointer;
